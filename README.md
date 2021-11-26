@@ -21,7 +21,7 @@ docker-compose up -d
 Composer is included
 
 ```
-docker-compose run php composer 
+docker-compose run php composer install
 ```
 
 Create database and tables run follow commands
