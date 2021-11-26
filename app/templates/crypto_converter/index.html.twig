@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Converted history{% endblock %}
+
+{% block body %}
+    <h1>Converted history</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>From</th>
+                <th>To</th>
+                <th>Amount</th>
+                <th>Converted amount</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for converted_history in convertedHistories %}
+            <tr>
+                <td>{{ converted_history.from }}</td>
+                <td>{{ converted_history.to }}</td>
+                <td>{{ converted_history.amount }}</td>
+                <td>{{ converted_history.convertedAmount }}</td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('crypto_converter_new') }}">Create new</a>
+{% endblock %}
