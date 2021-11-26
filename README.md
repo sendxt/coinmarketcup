@@ -7,7 +7,7 @@ git clone git@gitlab.com:sendxt/coinmarketcup.git
 
 cd coinmarketcup
 
-docker-compose up
+docker-compose up -d
 ```
 
 ## Compose
